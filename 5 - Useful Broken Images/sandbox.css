@@ -1,0 +1,27 @@
+
+.image {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+  .image::after {
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 200px;
+    background-color: #f0f0f0;
+    border: dashed 1px #888;
+    background-color: #e6e6e6;
+    content: "" attr(alt) " not found";
+    background-image: url("noimage.png");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    padding: 5px 10px 5px 40px;
+    background-position: 10px 5px;
+  }

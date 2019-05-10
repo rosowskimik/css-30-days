@@ -1,0 +1,29 @@
+
+.sticky-sidebar-lesson {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sticky-sidebar-lesson::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.sticky-sidebar-lesson .sandbox {
+    margin: 0 0 40px;
+    width: 60%;
+    float: left;
+}
+
+.sticky-sidebar {
+    background: #e7eef1;
+    padding: 40px 40px 60px;
+    box-sizing: border-box;
+    box-shadow: 0 12px 0 -6px #fa90a3;
+    border-radius: 2px;
+    width: 36%;
+    right: 5%;
+    position: fixed;
+    float: right;
+}

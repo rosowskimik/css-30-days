@@ -1,0 +1,110 @@
+
+.animation-bar-1 {
+  position: relative;
+  display: block;
+  background: rgba(0,0,0,0.1);
+  padding: 5px;
+  font-size: 21px;
+  line-height: 21px;
+  box-shadow: inset 1px 2px rgba(0,0,0,0.25), 1px 2px rgba(255,255,255,0.85);
+  border-radius: 30px;
+}
+
+.animation-bar-1 span {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 30px;
+  background-color: #f56982;
+  background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+  background-size: 100%;
+  animation: progress-bar-1 3s infinite linear;
+}
+
+.animation-bar-1 span::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  display: inline-block;
+  content: "";
+  background-image: linear-gradient(45deg, #fff 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 50%, #fff 50%, #fff 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0));
+  background-size: 50px 50px;
+  opacity: 0.3;
+  animation: progress-bar-1-after 0.38s infinite linear;
+}
+
+@keyframes progress-bar-1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progress-bar-1-after {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 50px 100%;
+  }
+}
+
+.animation-bar-2 {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  background: rgba(0,0,0,0.1);
+  box-shadow: inset 1px 2px rgba(0,0,0,0.25), 1px 2px rgba(255,255,255,0.85);
+}
+
+.animation-bar-2 span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background: #00e6e7;
+  height: 20px;
+  background-image: linear-gradient(180deg, #00b3b4, #008081);
+  animation: animation-bar-2 3s infinite linear;
+}
+
+.animation-bar-2 span::before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  content: "";
+  border: solid 10px transparent;
+  width: 0;
+  height: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-top-color: rgba(0,0,0,0.8);
+}
+
+.animation-bar-2 span::after {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  content: attr(data-label);
+  font-size: 0.8em;
+  line-height: 0.8em;
+  padding: 5px;
+  border-radius: 2px 2px 0 2px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+@keyframes animation-bar-2 {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 95%;
+  }
+}

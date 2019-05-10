@@ -1,0 +1,95 @@
+
+.layout1 main {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout1 main article {
+  flex: 1 58%;
+  margin-right: 2%;
+}
+
+.layout1 main aside {
+  flex: 1 40%;
+}
+
+.layout2 header {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout2 header nav {
+  flex: 1;
+  margin: auto 0 auto 2%;
+}
+
+.layout2 header .logo {
+  margin: auto 0 auto;
+}
+
+.layout2 main {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout2 article {
+  flex: 1 56%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.layout2 aside {
+  flex: 1 20%;
+}
+
+.layout3 header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.layout3 header nav {
+  flex: 1;
+  margin: auto 2% auto auto;
+}
+
+.layout3 header .logo {
+  margin: auto 0 auto 0;
+}
+
+.layout3 .articles {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout3 article {
+  flex: 1;
+  margin: auto 2%;
+}
+
+.layout3 article:last-child,
+.layout3 article:first-child {
+  margin: auto 0;
+}
+
+@media screen and (max-width:768px) {
+  .layout1 main,
+  .layout1 main article,
+  .layout1 main aside,
+  .layout2 header,
+  .layout2 header nav,
+  .layout2 header .logo,
+  .layout2 main,
+  .layout2 article,
+  .layout2 aside,
+  .layout3 header,
+  .layout3 header nav,
+  .layout3 header .logo,
+  .layout3 .articles,
+  .layout3 article,
+  .layout3 article:first-child {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0 0 2% 0;
+  }
+}

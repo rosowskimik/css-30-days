@@ -1,0 +1,50 @@
+
+.button {
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #333333;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(0.5);
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    width: 100%;
+    max-width: 640px;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition-delay: 0.1s;
+    pointer-events: none;
+}
+
+.modal__content {
+  display: block;
+  padding: 30px;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked ~ .modal {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}

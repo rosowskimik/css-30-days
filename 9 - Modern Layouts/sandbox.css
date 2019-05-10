@@ -1,0 +1,110 @@
+
+.layout1 header {
+  width: 100%;
+}
+
+.layout1 article {
+  float: left;
+  width: 58%;
+}
+
+.layout1 aside {
+  width: 40%;
+  float: right;
+}
+
+.layout1 footer {
+  clear: both;
+}
+
+.layout2 .logo {
+  float: left;
+  width: 28%;
+  margin: 0;
+}
+
+.layout2 nav {
+  float: right;
+  width: 70%;
+  margin: 0;
+}
+
+.layout2 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.layout2 aside.sidenav {
+  float: left;
+  width: 23%;
+}
+
+.layout2 article {
+  float: left;
+  margin: 0 0 0 2%;
+  width: 48%;
+}
+
+.layout2 aside.sidebar {
+  float: right;
+  width: 25%;
+}
+
+.layout2 footer {
+  clear: both;
+}
+
+.layout3 .logo {
+  float: right;
+  width: 25%;
+  margin: 0;
+}
+
+.layout3 nav {
+  float: left;
+  width: 73%;
+  margin: 0;
+}
+
+.layout3 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.layout3 article {
+  width: 32%;
+  margin: 0 2% 0 0;
+  float: left;
+}
+
+.layout3 article:last-child {
+  margin: 0;
+}
+
+.layout3 .articles::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+@media screen and ( max-width : 768px ) {
+  .layout1 header,
+  .layout1 article,
+  .layout1 aside,
+  .layout1 footer,
+  .layout2 .logo,
+  .layout2 nav,
+  .layout2 aside.sidenav,
+  .layout2 article,
+  .layout2 aside.sidebar,
+  .layout2 footer,
+  .layout3 .logo,
+  .layout3 nav,
+  .layout3 article {
+    width: 100%;
+    margin: 0 0 2% 0;
+    float: none;
+  }
+}

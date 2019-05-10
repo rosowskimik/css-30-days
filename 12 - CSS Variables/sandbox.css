@@ -1,0 +1,23 @@
+
+.sandbox {
+  --color: orangered;
+  --sec-color: hotpink;
+  --size: 20px;
+}
+
+.sandbox .box {
+--text-color: #f3f3f3;
+  text-align: center;
+  margin: var(--size);
+  color: var(--text-color);
+  background: var(--color);
+  height: calc(var(--size)*10);
+  width: calc(var(--size)*10);
+  line-height: calc(var(--size)*10);
+  display: block;
+
+}
+
+.sandbox .box2 {
+  background: var(--sec-color);
+}

@@ -1,0 +1,17 @@
+
+.depth-gallery img {
+  border: solid 7px white;
+  box-shadow: 0 0 5px rgba(0,0,0,.4);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.depth-gallery:hover img {
+  filter: blur(3px);
+  transform: scale(.9);
+}
+
+.depth-gallery img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
